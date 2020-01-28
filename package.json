@@ -1,0 +1,32 @@
+{
+    "name": "docxtemplater",
+    "version": "0.0.1",
+    "author": "Maxim Gorshkov",
+    "description": "docxtemplater Example",
+    "engines": {
+        "node": "8.7",
+        "npm": "3.10.10"
+    },
+    "scripts": {
+        "lint": "tslint **/**.ts{,x} --project tslint.json",
+        "build": "npm run lint && tsc -p src",
+        "dev": "npm run lint && concurrently \"tsc -w -p src\" \"nodemon --inspect=localhost:8730 dist/app.js\"",
+        "start": "node ./dist/app.js"
+    },
+    "private": true,
+    "dependencies": {
+        "docxtemplater": "3.16.8",
+        "dotenv": "8.0.0",
+        "moment": "2.24.0",
+        "pizzip": "3.0.6"
+    },
+    "devDependencies": {
+        "@types/dotenv": "6.1.1",
+        "@types/node": "12.0.10",
+        "concurrently": "4.1.0",
+        "nodemon": "1.19.1",
+        "ts-node": "8.3.0",
+        "tslint": "5.18.0",
+        "typescript": "3.7.5"
+    }
+}
